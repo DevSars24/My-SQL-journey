@@ -1,0 +1,179 @@
+
+
+# File 4: SQL Datatypes & Types of SQL Commands (Explained in Detail)
+
+This file covers **SQL data types** and **types of SQL commands** that every backend developer must know.
+
+---
+
+# **1. SQL Datatypes**
+
+Datatypes define the **type of data** a column can store.
+
+---
+
+## **A. Numeric Datatypes**
+
+| Datatype      | Description                            |
+| ------------- | -------------------------------------- |
+| INT           | Whole numbers                          |
+| BIGINT        | Very large whole numbers               |
+| FLOAT         | Decimal numbers (less precision)       |
+| DOUBLE        | More precise decimal numbers           |
+| DECIMAL(10,2) | Fixed precision numbers (money values) |
+
+---
+
+## **B. String Datatypes**
+
+| Datatype     | Description                           |
+| ------------ | ------------------------------------- |
+| CHAR(50)     | Fixed-length string                   |
+| VARCHAR(255) | Variable-length string                |
+| TEXT         | Large text data                       |
+| LONGTEXT     | Very large text (blogs, descriptions) |
+
+---
+
+## **C. Date & Time Datatypes**
+
+| Datatype  | Description                             |
+| --------- | --------------------------------------- |
+| DATE      | Stores date (YYYY-MM-DD)                |
+| TIME      | Time only                               |
+| DATETIME  | Date + Time                             |
+| TIMESTAMP | Auto timestamp (created_at, updated_at) |
+
+---
+
+## **D. Boolean Datatype**
+
+| Datatype | Description      |
+| -------- | ---------------- |
+| BOOLEAN  | True/False value |
+
+---
+
+## **E. JSON Datatype**
+
+Used in PostgreSQL, MySQL 8+ for storing JSON data.
+
+### Example:
+
+```sql
+metadata JSON
+```
+
+---
+
+# **2. Types of SQL Commands**
+
+SQL commands are divided into **five major categories**.
+
+---
+
+# **A. DDL (Data Definition Language)**
+
+Used to **define structure** of database objects.
+
+Examples:
+
+```sql
+CREATE TABLE users (...);
+ALTER TABLE users ADD age INT;
+DROP TABLE users;
+```
+
+Commands:
+
+* CREATE
+* ALTER
+* DROP
+* TRUNCATE
+
+---
+
+# **B. DML (Data Manipulation Language)**
+
+Used for **manipulating data** in tables.
+
+Examples:
+
+```sql
+INSERT INTO users (...);
+UPDATE users SET ...;
+DELETE FROM users WHERE ...;
+```
+
+Commands:
+
+* INSERT
+* UPDATE
+* DELETE
+* SELECT (sometimes categorized separately)
+
+---
+
+# **C. DQL (Data Query Language)**
+
+Used only for **fetching data**.
+
+```sql
+SELECT * FROM users;
+```
+
+Command:
+
+* SELECT
+
+---
+
+# **D. DCL (Data Control Language)**
+
+Used to **control access** to data.
+
+Examples:
+
+```sql
+GRANT SELECT ON users TO saurabh;
+REVOKE SELECT ON users FROM saurabh;
+```
+
+Commands:
+
+* GRANT
+* REVOKE
+
+---
+
+# **E. TCL (Transaction Control Language)**
+
+Used for **managing transactions**.
+
+Examples:
+
+```sql
+BEGIN;
+UPDATE users SET name = "Ram";
+COMMIT;
+```
+
+Commands:
+
+* COMMIT
+* ROLLBACK
+* SAVEPOINT
+
+---
+
+# **Conclusion**
+
+These SQL fundamentals are important for:
+
+* Backend development
+* Supabase / PostgreSQL
+* MySQL, NeonDB
+* Next.js backend
+* Node.js with SQL libraries
+
+You now have all 4 files with in-depth explanations.
