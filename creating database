@@ -1,0 +1,107 @@
+# File 3: Creating Our First Database & First Table (Step-by-Step Guide)
+
+In this file, you will learn **how to create your own database** and **how to create your first table** using SQL.
+
+---
+
+# **1. Creating Our First Database**
+
+A database is a container for tables, views, functions, etc.
+
+### **SQL Command:**
+
+```sql
+CREATE DATABASE my_app;
+```
+
+### **Select the Database:**
+
+```sql
+USE my_app;
+```
+
+This tells SQL Workbench that all your next queries belong to this database.
+
+---
+
+# **2. Creating Our First Table**
+
+A table stores data in rows and columns.
+
+### **Example: Create a `users` table**
+
+```sql
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+# **Explain Each Column**
+
+### **id**
+
+* INT → number
+* PRIMARY KEY → unique identifier
+* AUTO_INCREMENT → automatically increases
+
+### **name**
+
+* VARCHAR(100) → max 100 characters
+
+### **email**
+
+* UNIQUE → no two users can have the same email
+
+### **password**
+
+* Stores hashed passwords
+
+### **created_at**
+
+* Automatically stores timestamp when record is inserted
+
+---
+
+# **3. Insert Data Into Table**
+
+```sql
+INSERT INTO users (name, email, password)
+VALUES ("Saurabh", "saurabh@example.com", "12345");
+```
+
+---
+
+# **4. Fetch Data**
+
+```sql
+SELECT * FROM users;
+```
+
+---
+
+# **5. Update Data**
+
+```sql
+UPDATE users
+SET name = "Saurabh Singh"
+WHERE id = 1;
+```
+
+---
+
+# **6. Delete Data**
+
+```sql
+DELETE FROM users
+WHERE id = 1;
+```
+
+---
+
+This is how you create your first **database**, **table**, and **CRUD operations** (Create, Read, Update, Delete).
