@@ -80,7 +80,3 @@ SELECT * FROM users;
 
 * Not graphical like phpMyAdmin
 * Requires manual SQL writing
-
----
-
-If you'd like, I will now provide **File 2: Types of Databases**, **File 3: Creating Your First Database + Table**, and **File 4: SQL Datatypes + SQL Command Types** in the next turns. Say **"next"** when ready.
